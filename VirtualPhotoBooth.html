@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="instagram.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" integrity="sha512-D0B6cFS+efdzUE/4wh5XF5599DtW7Q1bZOjAYGBfC0Lg9WjcrqPXZto020btDyrlDUrfYKsmzFvgf/9AB8J0Jw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="fabric.min.js"></script>
+    <script src="./node_modules/cloudinary-core/cloudinary-core.min.js" type="text/javascript"></script>
+    <!-- <script src="/lodash/lodash.js" type="text/javascript"></script>
+    <script src="/cloudinary-core/cloudinary-core.js" type="text/javascript"></script> -->
+</head>
+<body>
+    <div class="main">
+    <!--Navbar-->
+    <header class="nav-header">
+        <nav id="header-nav" class="navbar navbar-default">
+          <div class="container">
+            <a class="navbar-brand pull-left" href="home.html"><img src="./images/logo1.png" width="100px" height="100px"></a>
+            <h1 class="navbar-brand pull-right">VIRTUAL BOOTH</h1>
+          </div>
+       </nav>
+    </header>
+    <div id="wrapper">
+    <main id="camera">
+        <video id="camera--view" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+        <canvas id="temp--canvas"></canvas>
+    </main>
+    <p id="selfie-text">Take a Selfie!</p>
+    <!--buttons-->
+    <div id="buttons">
+
+        <!-- Camera trigger -->
+        <button id="camera--trigger" onclick="capture()">Snap</button>
+
+        <!-- Upload Image -->
+        <input type="file"  accept="image/*" name="image" id="file" onchange="uploadImage(event)" style="display: none;">
+        <label for="file" style="cursor: pointer;" id="image--upload">Upload Image</label>
+
+        <!-- Camera trigger -->
+        <button id="camera--retrigger">ReTake</button>
+
+        <!-- Camera Next -->
+        <button id="camera--next" onclick="goToFilters()">Next</button>
+
+    </div>
+
+     <!--Filter-->
+     <div class="menu-wrapper">
+        <ul class="menu">
+            <li class="item" id="none" onclick="changeFilter('none')"></li>
+            <li class="item filter-crema" id="crema" onclick="changeFilter('crema')"></li>
+            <li class="item filter-hudson" id="hudson" onclick="changeFilter('hudson')"></li>
+            <li class="item filter-inkwell" id="inkwell" onclick="changeFilter('inkwell')"></li>
+            <li class="item filter-maven" id="maven" onclick="changeFilter('maven')"></li>
+            <li class="item lastItem filter-moon" id="trial" onclick="changeFilter('trial')"></li>
+        </ul>
+    
+        <div class="paddles">
+            <button class="left-paddle paddle">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="right-paddle paddle">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <!--Frames-->
+    <div class="menu-wrapper1">
+        <ul class="menu1">
+            <li class="item1" id="frame0" onclick="changeFrame('none')"></li>
+            <li class="item1" id="frame1" onclick="changeFrame('frame1')"></li>
+            <li class="item1" id="frame2" onclick="changeFrame('frame2')"></li>
+            <li class="item1" id="frame3" onclick="changeFrame('frame3')"></li>
+            <li class="item1" id="frame4" onclick="changeFrame('frame4')"></li>
+            <li class="item1" id="frame5" onclick="changeFrame('frame5')"></li>
+            <li class="item1 lastItem" id="frame6" onclick="changeFrame('frame6')"></li>
+        </ul>
+    
+        <div class="paddles1">
+            <button class="left-paddle1 paddle1">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="right-paddle1 paddle1">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    
+    </div>
+    <!--Stickers-->
+    <div class="menu-wrapper2">
+        <ul class="menu2">
+            <li class="item2" id="sticker1" onclick="changeSticker('sticker1')" ></li>
+            <li class="item2" id="sticker2" onclick="changeSticker('sticker2')"></li>
+            <li class="item2" id="sticker3" onclick="changeSticker('sticker3')"></li>
+            <li class="item2" id="sticker4" onclick="changeSticker('sticker4')"></li>
+            <li class="item2" id="sticker5" onclick="changeSticker('sticker5')"></li>
+            <li class="item2" id="sticker6" onclick="changeSticker('sticker6')"></li>
+        </ul>
+    
+        <div class="paddles2">
+            <button class="left-paddle2 paddle2">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="right-paddle2 paddle2">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <!--Download-->
+    <div class="download">
+        <button id="download" onclick="download()">Download</button>
+    </div>
+    <!--Next and Prev Buttons-->
+    <div id="after-buttons">
+        <!--next-->
+        <button id="next" onclick="goToFrame()">Next</button>
+        <!--Prev-->
+        <button id="prev" onclick="backToCamera()">Prev</button>
+    </div>
+</div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

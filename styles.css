@@ -1,0 +1,514 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: indigo !important;
+  }
+/*index page*/
+#logo-index{
+    display: block;
+    margin: auto;
+    margin-top: -50px;
+}
+
+#heading-index{
+    display: block;
+    margin: auto;
+    color: #f3f3f3;
+    width: fit-content;
+}
+
+#enter{
+    width: 130px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    bottom: 80px;
+    left: calc(50% - 100px);
+    margin:auto;
+    display: block;
+    height: 130px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-top: 50px;
+} 
+
+#index-links{
+    color: white;
+    display: block;
+    margin: auto;
+    width: fit-content;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+#index-links a{
+    color: white;
+    text-decoration: underline;
+}
+
+#index-footer{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    left: calc(50% - 100px);
+    opacity: 0.7;
+}
+
+#index-footer a{
+    color: white;
+    text-decoration: underline;
+}
+
+/*Landing page*/
+.main{
+    height:100%;
+    width:100%;
+}
+
+/*Navbar*/
+
+.navbar-default{
+    /* height: 120px; */
+    border-radius: 0 !important;
+    height: 100px;
+    background-color: indigo !important;
+    border: none !important;
+    /* background-color: tomato !important; */
+    /* margin-bottom: 5px !important; */
+    /* border:1px solid white !important; */
+    /* border-radius: 10px 10px 0px 0px!important; */
+    /* border-bottom: none !important */
+}
+
+#header-nav{
+    margin:0;
+}
+
+#header-nav .container{
+    height: 100px !important;
+    width: 100% !important;
+}
+
+#header-nav h1{
+    font-size: large;
+    font-weight: bolder;
+    height: fit-content !important;
+    margin-top: 40px;
+    color: white;
+}
+
+.navbar-brand{
+    padding: 0% !important; 
+    display: block !important;
+    height: 100% !important;
+    width: 200px !important;
+}
+
+.navbar-brand img{
+    height: 100% !important;
+    width: 100% !important;
+    margin-top: -10px;
+}
+
+/*wrapper*/
+
+#wrapper{
+    background-color: white;
+    width: fit-content;
+    height: 84%;
+    margin: auto;
+    border-radius: 2px;
+    padding-top: 10px;
+}
+
+/*Video and canvas*/
+#camera--view{
+    width:320px;
+    height: 240px;
+    transform: scaleX(-1);
+}
+
+#camera{
+    margin-top: 10px;
+    height: 240px;
+    width: 320px;
+    object-fit: cover;
+    margin: auto;
+}
+
+#temp--canvas{
+    display: none;
+}
+
+#canvas{
+    display: none;
+}
+
+.taken{
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/*selfie text*/
+#selfie-text{
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    font-size: medium;
+}
+
+/*buttons*/
+#buttons{
+    width: 340px;
+}
+
+button{
+    box-sizing: border-box !important;
+    margin: auto;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+#image--upload{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-weight: bolder;
+    color:blueviolet;
+}
+#camera--trigger{
+    width: 130px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    bottom: 80px;
+    left: calc(50% - 100px);
+    margin:auto;
+    display: block;
+    height: 130px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+#camera--retrigger,#camera--next,#download{
+    width: 130px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    bottom: 80px;
+    left: calc(50% - 100px);
+    margin:auto;
+    margin-left: 20px;
+    display: none;
+    height: 130px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+
+#after-buttons{
+    position: relative;
+    margin-top:20px;
+}
+
+#next{
+    position: absolute;
+    right: 5px;
+    display: none;
+    border: none;
+    border-radius: 5px;
+    width:120px;
+    height: 50px;
+    background-color: blueviolet;
+}
+
+#prev{
+    position: absolute;
+    left:5px;
+    display: none;
+    border: none;
+    border-radius: 5px;
+    width:120px;
+    height: 50px;
+    background-color: blueviolet;
+}
+
+/*Filters*/
+.menu-wrapper {
+    display: none;
+	position: relative;
+	width: 340px;
+	height: 100px; 
+	margin: 1em auto;
+	border: 1px solid black;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.menu	{
+	height: 120px;
+	background: #f3f3f3;
+	box-sizing: border-box;
+	
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	
+}
+
+.menu > .item {
+    
+		display: inline-block;
+		width: 100px;
+		height: 100%;
+		outline: 1px dotted gray;
+		padding: 1em;
+		box-sizing: border-box;
+}
+
+.paddles {
+}
+.paddle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 3em;
+}
+.left-paddle {
+    color: black;
+}
+.right-paddle {
+	right: 0;
+}
+.hidden {
+	display: none;
+}
+
+.lastItem {
+    margin-right: 40px;
+}
+
+
+/*Frames*/
+.menu-wrapper1 {
+    display: none;
+	position: relative;
+	width: 340px;
+	height: 100px; 
+	margin: 1em auto;
+	border: 1px solid black;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.menu1	{
+	height: 120px;
+	background: #f3f3f3;
+	box-sizing: border-box;
+	
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	
+}
+
+.menu1 > .item1 {
+    
+		display: inline-block;
+		width: 100px;
+		height: 100%;
+		outline: 1px dotted gray;
+		padding: 1em;
+		box-sizing: border-box;
+}
+
+.paddles1{
+}
+.paddle1 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 3em;
+}
+.left-paddle1 {
+	left: 0;
+}
+.right-paddle1 {
+	right: 0;
+}
+.hidden {
+	display: none;
+}
+
+#none{
+    background-color: gray;
+}
+
+#frame0{
+    background-color: gray;
+}
+
+#frame1{
+    background-image: url('frames/frame-1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#frame2{
+    background-image: url('frames/frame-2.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#frame3{
+    background-image: url('frames/frame-3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#frame4{
+    background-image: url('frames/frame-4.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#frame5{
+    background-image: url('frames/frame-5.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#frame6{
+    background-image: url('frames/frame-6.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/*Stickers*/
+.menu-wrapper2 {
+    display: none;
+	position: relative;
+	width: 340px;
+	height: 100px; 
+	margin: 1em auto;
+	border: 1px solid black;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.menu2	{
+	height: 120px;
+	background: #f3f3f3;
+	box-sizing: border-box;
+	
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	
+}
+
+.menu2 > .item2 {
+    
+		display: inline-block;
+		width: 100px;
+		height: 100%;
+		outline: 1px dotted gray;
+		padding: 1em;
+		box-sizing: border-box;
+}
+
+.paddles2{
+}
+.paddle2 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 3em;
+}
+.left-paddle2 {
+	left: 0;
+}
+.right-paddle2 {
+	right: 0;
+}
+.hidden {
+	display: none;
+}
+
+#none{
+    background-color: gray;
+}
+
+#sticker1{
+    background-image: url('./stickers/sticker1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sticker2{
+    background-image: url('./stickers/sticker2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sticker3{
+    background-image: url('./stickers/sticker3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sticker4{
+    background-image: url('./stickers/sticker4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sticker5{
+    background-image: url('./stickers/sticker5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sticker6{
+    background-image: url('./stickers/sticker6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Download*/
+
+@media screen and (max-width:440px){
+    .navbar-brand{
+        margin-left: 70px;
+    }
+
+    #header-nav h1{
+        display: none !important;
+    }
+}
