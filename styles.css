@@ -507,12 +507,6 @@ button:hover {
         margin-left: 70px;
     }
 
-     #camera--view{
-        width:320px !important;
-        height: 240px !important;
-        transform: scaleX(-1) !important;
-    }
-
     #header-nav h1{
         display: none !important;
     }
