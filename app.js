@@ -90,6 +90,7 @@ function uploadImage(event){
 
 //after getting image
 function goToImage(){
+  console.log(camera.videoWidth);
   selfieText.innerHTML = "Looking Good";
   console.log(image.src);
   canvas = new fabric.Canvas('canvas');
