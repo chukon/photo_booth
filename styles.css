@@ -130,8 +130,6 @@ html, body{
 
 /*Video and canvas*/
 #camera--view{
-    width:320px;
-    height: 240px;
     transform: scaleX(-1);
     object-fit:cover;
 }
