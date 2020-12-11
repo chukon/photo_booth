@@ -45,11 +45,11 @@ function cameraStart() {
         .then(function(stream) {
         track = stream.getTracks()[0];
         camera.srcObject = stream;
-        console.log(camera.videoWidth);
       })
       .catch(function(error) {
         console.error("Oops. Something is broken.", error);
       });
+       console.log(camera.videoWidth);
 }
 
 //capturing the image from video and putting it into canvas
