@@ -31,7 +31,6 @@ var HideControls = {
 
 let width= 320,
 height = 240,
-streaming = false,
 track = null;
 
 //entering into camera page
@@ -41,15 +40,15 @@ function cameraPage(){
 
 //Starting the camera and setting width and height of canvas
 function cameraStart() {
-    navigator.mediaDevices
+     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
         track = stream.getTracks()[0];
         camera.srcObject = stream;
-    })
-    .catch(function(error) {
+      })
+      .catch(function(error) {
         console.error("Oops. Something is broken.", error);
-    });
+      });
 }
 
 //capturing the image from video and putting it into canvas
@@ -138,7 +137,7 @@ cameraRetrigger.onclick = function(){
 
 //goToFilters
 function goToFilters(){
-  selfieText.innerHTML = "Apply Filters..";
+  selfieText.innerHTML = "Apply Filters**";
   var leftPaddle = document.getElementsByClassName('left-paddle');
   var rightPaddle = document.getElementsByClassName('right-paddle');
   // scroll to left
