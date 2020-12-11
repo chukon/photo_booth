@@ -41,27 +41,15 @@ function cameraPage(){
 
 //Starting the camera and setting width and height of canvas
 function cameraStart() {
-    navigator.mediaDevices.getUserMedia({video: true, audio: false})
-      .then(function(stream) {
-        camera.srcObject = stream;
-        camera.play();
-      })
-      .catch(function(err) {
-        console.log("An error occurred: " + err);
-      });
-
-      camera.addEventListener('canplay', function(ev){
-        if (!streaming) {
-        
-          camera.setAttribute('width', 320);
-          camera.setAttribute('height', 240);
-          cameraSensor.setAttribute('width', width);
-          cameraSensor.setAttribute('height', height);
-          tempSensor.setAttribute('width', width);
-          tempSensor.setAttribute('height', height);
-          streaming = true;
-        }
-      }, false);
+    navigator.mediaDevices
+        .getUserMedia(constraints)
+        .then(function(stream) {
+        track = stream.getTracks()[0];
+        cameraView.srcObject = stream;
+    })
+    .catch(function(error) {
+        console.error("Oops. Something is broken.", error);
+    });
 }
 
 //capturing the image from video and putting it into canvas
@@ -150,7 +138,7 @@ cameraRetrigger.onclick = function(){
 
 //goToFilters
 function goToFilters(){
-  selfieText.innerHTML = "Apply Filters.";
+  selfieText.innerHTML = "Apply Filters..";
   var leftPaddle = document.getElementsByClassName('left-paddle');
   var rightPaddle = document.getElementsByClassName('right-paddle');
   // scroll to left
