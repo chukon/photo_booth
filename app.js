@@ -43,25 +43,18 @@ function cameraPage(){
 function cameraStart() {
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
       .then(function(stream) {
+        camera.setAttribute('width', width);
+          camera.setAttribute('height', height);
+          cameraSensor.setAttribute('width', width);
+          cameraSensor.setAttribute('height', height);
+          tempSensor.setAttribute('width', width);
+          tempSensor.setAttribute('height', height);
         camera.srcObject = stream;
         camera.play();
       })
       .catch(function(err) {
         console.log("An error occurred: " + err);
       });
-
-      camera.addEventListener('canplay', function(ev){
-        if (!streaming) {
-        
-          camera.setAttribute('width', width);
-          camera.setAttribute('height', height);
-          cameraSensor.setAttribute('width', width);
-          cameraSensor.setAttribute('height', height);
-          tempSensor.setAttribute('width', width);
-          tempSensor.setAttribute('height', height);
-          streaming = true;
-        }
-      }, false);
 }
 
 //capturing the image from video and putting it into canvas
