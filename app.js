@@ -315,7 +315,7 @@ function changeFrame(frame){
 
 
 function goToSticker(){
-  cameranext.setAttribute("onClick","goToDownload()");
+  cameraNext.setAttribute("onClick","goToDownload()");
   selfieText.innerHTML = "goToDownload";
  // selfieText.innerHTML = "Apply Stickers";
   var leftPaddle = document.getElementsByClassName('left-paddle2');
