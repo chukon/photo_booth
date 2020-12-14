@@ -315,7 +315,9 @@ function changeFrame(frame){
 
 
 function goToSticker(){
-  selfieText.innerHTML = "Apply Stickers";
+  cameranext.setAttribute("onClick","goToDownload()");
+  selfieText.innerHTML = "goToDownload";
+ // selfieText.innerHTML = "Apply Stickers";
   var leftPaddle = document.getElementsByClassName('left-paddle2');
   var rightPaddle = document.getElementsByClassName('right-paddle2');
   // scroll to left
@@ -337,8 +339,6 @@ function goToSticker(){
   menuwrapper2.style.display = "block";
   next.setAttribute('onClick',"goToDownload()");
   prev.setAttribute( "onClick", "backToCamera()" );
-  cameranext.setAttribute("onClick","goToDownload()");
-    selfieText.innerHTML = "goToDownload";
 }
 
 function changeSticker(sticker){
