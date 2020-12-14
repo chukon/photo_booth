@@ -336,7 +336,8 @@ function goToSticker(){
   menuwrapper1.style.display = "none";
   menuwrapper2.style.display = "block";
   next.setAttribute('onClick',"goToDownload()");
-  prev.setAttribute( "onClick", "backToStickers()" );
+  prev.setAttribute( "onClick", "backToCamera()" );
+  cameranext.setAttribute("onClick","goToDownload()");
 }
 
 function changeSticker(sticker){
@@ -453,7 +454,7 @@ function backToFrames(){
 function backToStickers(){
    selfieText.innerHTML = "Go to Download";
   prev.setAttribute("onClick","backToCamera()");
-  next.setAttribute("onClick","goToDownload()");
+    next.setAttribute("onClick","goToDownload()");
   next.innerHTML = "Next";
   goToSticker();
 }
