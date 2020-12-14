@@ -36,7 +36,7 @@ track = null;
 
 //entering into camera page
 function cameraPage(){
-  window.location="home.html";
+  window.location="index.html";
 }
 
 //Starting the camera and setting width and height of canvas
