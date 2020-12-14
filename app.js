@@ -16,6 +16,7 @@ uploadImg = document.querySelector("#image--upload"),
 selfieText = document.querySelector("#selfie-text"),
 next = document.querySelector("#next"),
 prev = document.querySelector("#prev");
+headers = document.querySelector("#nav-header");
 
 var HideControls = {
   'tl':true,
