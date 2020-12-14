@@ -42,7 +42,6 @@ function cameraPage(){
 
 //Starting the camera and setting width and height of canvas
 function cameraStart() {
-  headers.style.display = "none";
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
       .then(function(stream) {
         camera.srcObject = stream;
