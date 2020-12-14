@@ -451,7 +451,7 @@ function backToFrames(){
 }
 
 function backToStickers(){
-  prev.setAttribute("onClick","backToFrames()");
+  prev.setAttribute("onClick","backToCamera()");
   next.setAttribute("onClick","goToDownload()");
   next.innerHTML = "Next";
   goToSticker();
