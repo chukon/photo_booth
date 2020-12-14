@@ -362,7 +362,7 @@ function download(){
     image.setAttribute('crossOrigin', 'anonymous');
     image.onload = function(){
       var link = document.createElement('a');
-        link.download = "image_PhotoBooth.png";
+        link.download = "ckonkol_PhotoBooth.png";
         link.href = image.src;
         link.click();
     }
