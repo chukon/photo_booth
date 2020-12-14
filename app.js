@@ -451,6 +451,7 @@ function backToFrames(){
 }
 
 function backToStickers(){
+   selfieText.innerHTML = "Go to Download";
   prev.setAttribute("onClick","backToCamera()");
   next.setAttribute("onClick","goToDownload()");
   next.innerHTML = "Next";
