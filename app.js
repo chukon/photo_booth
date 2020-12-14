@@ -317,8 +317,7 @@ function changeFrame(frame){
 
 function goToSticker(){
   cameraNext.setAttribute("onClick","goToDownload()");
-  selfieText.innerHTML = "goToDownload";
- // selfieText.innerHTML = "Apply Stickers";
+  selfieText.innerHTML = "Apply Stickers";
   var leftPaddle = document.getElementsByClassName('left-paddle2');
   var rightPaddle = document.getElementsByClassName('right-paddle2');
   // scroll to left
