@@ -338,6 +338,7 @@ function goToSticker(){
   next.setAttribute('onClick',"goToDownload()");
   prev.setAttribute( "onClick", "backToCamera()" );
   cameranext.setAttribute("onClick","goToDownload()");
+    selfieText.innerHTML = "goToDownload";
 }
 
 function changeSticker(sticker){
