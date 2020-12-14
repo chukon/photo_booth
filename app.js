@@ -371,7 +371,7 @@ function download(){
 function goToDownload(){
   selfieText.innerHTML = "Download Photo";
   cameraNext.style.display = "none";
-  // downloadButton.style.display = "block";
+   downloadButton.style.display = "block";
   menuwrapper2.style.display = "none";
   next.innerHTML = "Download";
   next.setAttribute("onClick","download()");
