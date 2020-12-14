@@ -188,7 +188,7 @@ button:hover {
     color:blueviolet;
 }
 #camera--trigger{
-    width: 130px;
+    width: 100px;
     background-color: blueviolet;
     color: white;
     font-size: 16px;
@@ -201,14 +201,14 @@ button:hover {
     left: calc(50% - 100px);
     margin:auto;
     display: block;
-    height: 130px;
+    height: 100px;
     font-weight: bolder;
     letter-spacing: 2px;
     margin-top: 20px;
 }
 
 #camera--retrigger,#camera--next,#download{
-    width: 130px;
+    width: 100px;
     background-color: blueviolet;
     color: white;
     font-size: 16px;
@@ -220,9 +220,9 @@ button:hover {
     bottom: 80px;
     left: calc(50% - 100px);
     margin:auto;
-    margin-left: 20px;
+    margin-left: 43px;
     display: none;
-    height: 130px;
+    height: 100px;
     font-weight: bolder;
     letter-spacing: 2px;
     margin-top: 20px;
