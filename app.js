@@ -336,7 +336,7 @@ function goToSticker(){
   menuwrapper1.style.display = "none";
   menuwrapper2.style.display = "block";
   next.setAttribute('onClick',"goToDownload()");
-  prev.setAttribute( "onClick", "backToFrames()" );
+  prev.setAttribute( "onClick", "backToStickers()" );
 }
 
 function changeSticker(sticker){
